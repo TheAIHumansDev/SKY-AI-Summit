@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro de Participantes — SKY AI Summit 2027</title>
+<meta name="description" content="Regístrate como participante del SKY AI Summit 2027 — AI for Aviation Hackathon & Summit. El Salvador, 23–24 enero 2027.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ice:#FCFCFD;--electric:#2A6EF5;--violet:#7654FD;--gris:#B4B7D9;--dark:#0A0C1B;--mid:#141829;--dawn:#FF8C42;--sun:#FFD166;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--dark);font-family:'Space Grotesk',sans-serif;color:var(--ice);min-height:100vh;}
+a{color:var(--electric);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* BG */
+.bg-orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;filter:blur(130px);}
+.orb1{width:600px;height:600px;background:rgba(42,110,245,.09);top:-150px;right:-150px;}
+.orb2{width:500px;height:500px;background:rgba(118,84,253,.08);bottom:-100px;left:-100px;}
+
+/* LAYOUT */
+.page{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;min-height:100vh;}
+
+/* LEFT PANEL */
+.left-panel{
+  padding:64px 56px;display:flex;flex-direction:column;justify-content:center;
+  background:rgba(10,12,27,.6);border-right:1px solid rgba(180,183,217,.08);
+  backdrop-filter:blur(10px);
+}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gris);letter-spacing:.1em;margin-bottom:48px;transition:color .2s;}
+.back-link:hover{color:var(--electric);text-decoration:none;}
+.event-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(42,110,245,.1);border:1px solid rgba(42,110,245,.25);border-radius:100px;padding:5px 14px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--electric);letter-spacing:.15em;text-transform:uppercase;margin-bottom:28px;}
+.event-badge span{width:7px;height:7px;border-radius:50%;background:var(--electric);box-shadow:0 0 8px var(--electric);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:'Syne',sans-serif;font-size:clamp(32px,3.5vw,52px);font-weight:800;line-height:1.05;margin-bottom:16px;}
+h1 em{font-style:normal;background:linear-gradient(135deg,var(--electric),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.tagline{color:var(--gris);font-size:15px;line-height:1.7;margin-bottom:40px;max-width:420px;}
+
+/* BENEFITS */
+.benefits{display:flex;flex-direction:column;gap:16px;margin-bottom:44px;}
+.benefit{display:flex;gap:14px;align-items:flex-start;}
+.benefit-icon{width:38px;height:38px;border-radius:10px;background:rgba(42,110,245,.1);border:1px solid rgba(42,110,245,.2);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;margin-top:2px;}
+.benefit-text strong{display:block;font-size:15px;font-weight:600;color:var(--ice);margin-bottom:3px;}
+.benefit-text span{font-size:13px;color:var(--gris);line-height:1.5;}
+
+/* TYPES */
+.ticket-types{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:40px;}
+.ticket{border:1px solid rgba(180,183,217,.12);border-radius:14px;padding:18px;cursor:pointer;transition:border-color .2s,background .2s;}
+.ticket:hover,.ticket.selected{border-color:var(--electric);background:rgba(42,110,245,.07);}
+.ticket.hack:hover,.ticket.hack.selected{border-color:var(--violet);background:rgba(118,84,253,.07);}
+.ticket-type{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gris);margin-bottom:6px;}
+.ticket-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--ice);}
+.ticket-desc{font-size:12px;color:var(--gris);margin-top:4px;line-height:1.4;}
+
+.event-info{background:rgba(255,255,255,.025);border:1px solid rgba(180,183,217,.1);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px;}
+.ei-row{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--gris);}
+.ei-row strong{color:var(--ice);font-weight:500;}
+
+/* RIGHT PANEL */
+.right-panel{
+  padding:64px 56px;display:flex;flex-direction:column;justify-content:center;
+  background:rgba(20,24,41,.5);
+}
+h2.form-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:8px;}
+.form-sub{font-size:13px;color:var(--gris);margin-bottom:36px;}
+.form-steps{display:flex;gap:0;margin-bottom:36px;}
+.step{display:flex;align-items:center;gap:8px;flex:1;}
+.step-num{width:28px;height:28px;border-radius:50%;border:2px solid rgba(180,183,217,.2);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gris);flex-shrink:0;transition:all .3s;}
+.step.active .step-num{border-color:var(--electric);background:var(--electric);color:#fff;}
+.step.done .step-num{border-color:var(--electric);background:transparent;color:var(--electric);}
+.step-label{font-size:11px;color:var(--gris);font-family:'JetBrains Mono',monospace;letter-spacing:.08em;}
+.step.active .step-label{color:var(--electric);}
+.step-line{flex:1;height:1px;background:rgba(180,183,217,.1);margin:0 4px;}
+
+/* FORM */
+.form-section{display:none;}
+.form-section.active{display:block;}
+.field-group{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.field-group.full{grid-template-columns:1fr;}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field label{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);font-family:'JetBrains Mono',monospace;}
+.field input,.field select,.field textarea{
+  background:rgba(255,255,255,.04);border:1px solid rgba(180,183,217,.18);
+  border-radius:10px;padding:12px 14px;font-family:'Space Grotesk',sans-serif;
+  font-size:14px;color:var(--ice);outline:none;transition:border-color .2s;
+  -webkit-appearance:none;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--electric);background:rgba(42,110,245,.05);}
+.field select option{background:var(--mid);color:var(--ice);}
+.field textarea{resize:vertical;min-height:80px;}
+.field input::placeholder,.field textarea::placeholder{color:rgba(180,183,217,.4);}
+.check-group{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+.check-item{display:flex;align-items:flex-start;gap:10px;cursor:pointer;}
+.check-item input[type=checkbox]{width:16px;height:16px;accent-color:var(--electric);margin-top:2px;flex-shrink:0;cursor:pointer;}
+.check-item span{font-size:13px;color:var(--gris);line-height:1.5;}
+.check-item span strong{color:var(--ice);}
+.form-nav{display:flex;gap:12px;margin-top:28px;}
+.btn-next{flex:1;background:linear-gradient(135deg,var(--electric),var(--violet));color:#fff;border:none;border-radius:100px;padding:14px 28px;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:opacity .2s,transform .2s;}
+.btn-next:hover{opacity:.88;transform:translateY(-1px);}
+.btn-back{background:transparent;color:var(--gris);border:1px solid rgba(180,183,217,.22);border-radius:100px;padding:14px 24px;font-family:'Space Grotesk',sans-serif;font-size:14px;cursor:pointer;transition:border-color .2s;}
+.btn-back:hover{border-color:var(--electric);color:var(--ice);}
+
+/* SUCCESS */
+.success-screen{display:none;text-align:center;padding:40px 20px;}
+.success-icon{font-size:56px;margin-bottom:20px;display:block;}
+.success-screen h3{font-family:'Syne',sans-serif;font-size:26px;font-weight:700;margin-bottom:12px;}
+.success-screen p{color:var(--gris);font-size:15px;line-height:1.7;margin-bottom:28px;}
+.confirmation-box{background:rgba(42,110,245,.07);border:1px solid rgba(42,110,245,.2);border-radius:14px;padding:20px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--electric);letter-spacing:.1em;}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+  .page{grid-template-columns:1fr;}
+  .left-panel{padding:40px 28px;border-right:none;border-bottom:1px solid rgba(180,183,217,.08);}
+  .right-panel{padding:40px 28px;}
+  .ticket-types{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .field-group{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="bg-orbs"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+
+<div class="page">
+
+  <!-- ── LEFT PANEL ── -->
+  <div class="left-panel">
+    <a href="sky-ai-summit.html" class="back-link">← Volver al Summit</a>
+
+    <div class="event-badge"><span></span>SKY AI Summit 2027</div>
+
+    <h1>Reserva tu <em>lugar en<br>el vuelo</em></h1>
+    <p class="tagline">Únete al primer Summit de Aviación + AI de Latinoamérica. Dos días de contenido de clase mundial, networking de alto nivel y un hackathon de 29 horas.</p>
+
+    <div class="ticket-types">
+      <div class="ticket summit selected" onclick="selectTicket(this,'summit')">
+        <div class="ticket-type">Modalidad</div>
+        <div class="ticket-name">🎤 Summit</div>
+        <div class="ticket-desc">Acceso al día de conferencias, keynotes y networking · 23 enero</div>
+      </div>
+      <div class="ticket hack" onclick="selectTicket(this,'hack')">
+        <div class="ticket-type">Modalidad</div>
+        <div class="ticket-name">💻 Hackathon</div>
+        <div class="ticket-desc">Participación en el hackathon de 29h · 23–24 enero</div>
+      </div>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit">
+        <div class="benefit-icon">🌍</div>
+        <div class="benefit-text">
+          <strong>Speakers CEO-level globales</strong>
+          <span>Boeing, Anthropic, Google DeepMind, Embraer, Airbus, Joby Aviation y más</span>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🤝</div>
+        <div class="benefit-text">
+          <strong>Networking de alto nivel</strong>
+          <span>Tomadores de decisiones de la aviación comercial en Latinoamérica</span>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">⚡</div>
+        <div class="benefit-text">
+          <strong>AI Tools Workshops</strong>
+          <span>Talleres prácticos con las herramientas de IA más avanzadas de la industria</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-info">
+      <div class="ei-row">📅 <span><strong>Sábado 23 de enero, 2027</strong> · Summit</span></div>
+      <div class="ei-row">🚀 <span><strong>23–24 enero, 2027</strong> · Hackathon (29 horas)</span></div>
+      <div class="ei-row">📍 <span><strong>KEY Institute + Auditorio FEPADE</strong> · San Salvador, El Salvador</span></div>
+    </div>
+  </div>
+
+  <!-- ── RIGHT PANEL ── -->
+  <div class="right-panel">
+    <h2 class="form-title">Formulario de registro</h2>
+    <p class="form-sub">Completa los datos para asegurar tu lugar. Recibirás confirmación por email.</p>
+
+    <!-- Steps -->
+    <div class="form-steps">
+      <div class="step active" id="step1">
+        <div class="step-num">1</div>
+        <div class="step-label">Datos</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" id="step2">
+        <div class="step-num">2</div>
+        <div class="step-label">Perfil</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" id="step3">
+        <div class="step-num">3</div>
+        <div class="step-label">Confirmación</div>
+      </div>
+    </div>
+
+    <!-- STEP 1: Datos personales -->
+    <div class="form-section active" id="fs1">
+      <div class="field-group">
+        <div class="field"><label>Nombre *</label><input type="text" id="fn" placeholder="Roberto" required></div>
+        <div class="field"><label>Apellido *</label><input type="text" id="ln" placeholder="Kriete" required></div>
+      </div>
+      <div class="field-group full">
+        <div class="field"><label>Email *</label><input type="email" id="em" placeholder="tuemail@empresa.com" required></div>
+      </div>
+      <div class="field-group">
+        <div class="field"><label>Teléfono / WhatsApp</label><input type="tel" id="ph" placeholder="+503 7000 0000"></div>
+        <div class="field"><label>País *</label>
+          <select id="country">
+            <option value="">Seleccionar…</option>
+            <option>El Salvador</option><option>Guatemala</option><option>Honduras</option>
+            <option>Nicaragua</option><option>Costa Rica</option><option>Panamá</option>
+            <option>México</option><option>Colombia</option><option>Estados Unidos</option>
+            <option>Otro</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-nav">
+        <button class="btn-next" onclick="goStep(2)">Siguiente → Perfil profesional</button>
+      </div>
+    </div>
+
+    <!-- STEP 2: Perfil profesional -->
+    <div class="form-section" id="fs2">
+      <div class="field-group full">
+        <div class="field"><label>Empresa / Organización *</label><input type="text" id="org" placeholder="Nombre de tu empresa"></div>
+      </div>
+      <div class="field-group">
+        <div class="field"><label>Cargo / Rol *</label><input type="text" id="role" placeholder="CEO, Ingeniero, Estudiante…"></div>
+        <div class="field"><label>Sector *</label>
+          <select id="sector">
+            <option value="">Seleccionar…</option>
+            <option>Aerolínea</option><option>Aeropuerto / Ground Handling</option>
+            <option>Tecnología / AI</option><option>Manufactura aeronáutica</option>
+            <option>MRO / Mantenimiento</option><option>Gobierno / Regulación</option>
+            <option>Educación / Academia</option><option>Startup / Emprendimiento</option>
+            <option>Inversión / Finanzas</option><option>Otro</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-group full">
+        <div class="field"><label>¿Por qué quieres asistir?</label>
+          <textarea id="why" placeholder="Cuéntanos brevemente tu motivación o qué esperas del evento…"></textarea>
+        </div>
+      </div>
+      <div class="field-group full">
+        <div class="field"><label>Modalidad de participación *</label>
+          <select id="mode">
+            <option value="">Seleccionar…</option>
+            <option>🎤 Solo Summit (día 23)</option>
+            <option>💻 Solo Hackathon (23–24)</option>
+            <option>🛫 Summit + Hackathon (ambos)</option>
+          </select>
+        </div>
+      </div>
+      <div class="check-group">
+        <label class="check-item"><input type="checkbox" id="vip"><span>Me interesa la <strong>experiencia VIP</strong> (incluye Cena VIP en Centro Histórico con speakers)</span></label>
+        <label class="check-item"><input type="checkbox" id="mentor"><span>Estoy disponible como <strong>mentor</strong> durante el hackathon</span></label>
+        <label class="check-item"><input type="checkbox" id="shirt"><span>Deseo recibir información sobre el <strong>kit de bienvenida</strong></span></label>
+      </div>
+      <div class="form-nav">
+        <button class="btn-back" onclick="goStep(1)">← Atrás</button>
+        <button class="btn-next" onclick="goStep(3)">Siguiente → Confirmar</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: Review + términos -->
+    <div class="form-section" id="fs3">
+      <div id="review-box" style="background:rgba(255,255,255,.03);border:1px solid rgba(180,183,217,.1);border-radius:14px;padding:20px;margin-bottom:20px;font-size:13px;color:var(--gris);line-height:1.8;"></div>
+      <div class="check-group">
+        <label class="check-item"><input type="checkbox" id="terms"><span>Acepto los <a href="#">Términos y Condiciones</a> y la <a href="#">Política de Privacidad</a> del SKY AI Summit 2027</span></label>
+        <label class="check-item"><input type="checkbox" id="comms"><span>Acepto recibir comunicaciones del evento y de KEY Institute / Aerojet</span></label>
+        <label class="check-item"><input type="checkbox" id="photo"><span>Autorizo el uso de fotografías y grabaciones del evento con fines promocionales</span></label>
+      </div>
+      <div class="form-nav">
+        <button class="btn-back" onclick="goStep(2)">← Atrás</button>
+        <button class="btn-next" onclick="submitForm()">🛫 Confirmar registro</button>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="success-screen" id="success">
+      <span class="success-icon">🛫</span>
+      <h3>¡Estás a bordo!</h3>
+      <p>Tu registro ha sido recibido. En las próximas 24–48 horas recibirás un email de confirmación con los detalles de acceso y la logística del evento.</p>
+      <div class="confirmation-box" id="conf-num">CONF · SKY27-XXXXXX</div>
+      <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="sky-ai-summit.html" style="display:inline-block;background:rgba(42,110,245,.1);border:1px solid rgba(42,110,245,.25);color:var(--electric);padding:10px 24px;border-radius:100px;font-size:13px;font-family:'Space Grotesk',sans-serif;">← Ver el Summit</a>
+        <a href="https://wa.me/50370000000" target="_blank" style="display:inline-block;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.25);color:#25D366;padding:10px 24px;border-radius:100px;font-size:13px;font-family:'Space Grotesk',sans-serif;">💬 WhatsApp del evento</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let ticketMode='summit';
+function selectTicket(el,mode){
+  document.querySelectorAll('.ticket').forEach(t=>t.classList.remove('selected'));
+  el.classList.add('selected');
+  ticketMode=mode;
+}
+
+function goStep(n){
+  // Validate step 1
+  if(n===2){
+    const fn=document.getElementById('fn').value.trim();
+    const ln=document.getElementById('ln').value.trim();
+    const em=document.getElementById('em').value.trim();
+    const country=document.getElementById('country').value;
+    if(!fn||!ln||!em||!country){alert('Por favor completa todos los campos requeridos (*).');return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){alert('Por favor ingresa un email válido.');return;}
+  }
+  if(n===3){
+    const org=document.getElementById('org').value.trim();
+    const role=document.getElementById('role').value.trim();
+    const sector=document.getElementById('sector').value;
+    const mode=document.getElementById('mode').value;
+    if(!org||!role||!sector||!mode){alert('Por favor completa todos los campos requeridos (*).');return;}
+    // Build review
+    const extras=[];
+    if(document.getElementById('vip').checked) extras.push('Interés en experiencia VIP');
+    if(document.getElementById('mentor').checked) extras.push('Disponible como mentor');
+    document.getElementById('review-box').innerHTML=`
+      <strong style="color:var(--ice);display:block;margin-bottom:8px">Resumen de registro</strong>
+      <b>Nombre:</b> ${document.getElementById('fn').value} ${document.getElementById('ln').value}<br>
+      <b>Email:</b> ${document.getElementById('em').value}<br>
+      <b>País:</b> ${document.getElementById('country').value}<br>
+      <b>Empresa:</b> ${org}<br>
+      <b>Cargo:</b> ${role} · ${sector}<br>
+      <b>Modalidad:</b> ${mode}<br>
+      ${extras.length?'<b>Extras:</b> '+extras.join(', '):''}
+    `;
+  }
+  for(let i=1;i<=3;i++){
+    const fs=document.getElementById('fs'+i);
+    if(fs){fs.classList.toggle('active',i===n);}
+    const st=document.getElementById('step'+i);
+    if(st){
+      st.classList.toggle('active',i===n);
+      st.classList.toggle('done',i<n);
+    }
+  }
+}
+
+function submitForm(){
+  if(!document.getElementById('terms').checked){alert('Debes aceptar los Términos y Condiciones para continuar.');return;}
+  // Hide all steps, show success
+  for(let i=1;i<=3;i++){
+    const fs=document.getElementById('fs'+i);
+    if(fs) fs.classList.remove('active');
+  }
+  // Generate fake confirmation number
+  const conf='SKY27-'+Math.random().toString(36).substr(2,6).toUpperCase();
+  document.getElementById('conf-num').textContent='CONF · '+conf;
+  document.getElementById('success').style.display='block';
+  // Scroll to success
+  document.getElementById('success').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
