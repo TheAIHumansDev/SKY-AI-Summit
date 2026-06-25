@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patrocinadores — SKY AI Summit 2027</title>
+<meta name="description" content="Conviértete en patrocinador del SKY AI Summit 2027. Cuatro niveles de patrocinio para conectar tu marca con los líderes de la aviación comercial en Latinoamérica.">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ice:#FCFCFD;--electric:#2A6EF5;--violet:#7654FD;--gris:#B4B7D9;--dark:#0A0C1B;--mid:#141829;--dawn:#FF8C42;--sun:#FFD166;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--dark);font-family:'Space Grotesk',sans-serif;color:var(--ice);overflow-x:hidden;}
+a{color:var(--electric);text-decoration:none;}
+
+/* BG */
+.bg-orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;filter:blur(140px);}
+.orb1{width:700px;height:700px;background:rgba(42,110,245,.07);top:-200px;right:-200px;}
+.orb2{width:500px;height:500px;background:rgba(118,84,253,.07);bottom:-100px;left:-100px;}
+.orb3{width:400px;height:400px;background:rgba(255,140,66,.04);top:50%;left:40%;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,12,27,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(180,183,217,.08);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;letter-spacing:.04em;}
+.nav-brand span{background:linear-gradient(135deg,var(--electric),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.nav-back{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gris);transition:color .2s;}
+.nav-back:hover{color:var(--electric);}
+.nav-cta{background:linear-gradient(135deg,var(--electric),var(--violet));color:#fff;border-radius:100px;padding:9px 22px;font-size:13px;font-weight:600;transition:opacity .2s;}
+.nav-cta:hover{opacity:.85;text-decoration:none;}
+
+/* CONTENT */
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+section{padding:80px 0;}
+
+/* HERO */
+#hero{text-align:center;padding:100px 0 80px;}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(42,110,245,.1);border:1px solid rgba(42,110,245,.28);border-radius:100px;padding:5px 16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--electric);letter-spacing:.18em;text-transform:uppercase;margin-bottom:28px;}
+.eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--electric);box-shadow:0 0 8px var(--electric);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+#hero h1{font-family:'Syne',sans-serif;font-size:clamp(36px,5.5vw,72px);font-weight:800;line-height:1.0;margin-bottom:20px;}
+#hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--electric),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+#hero p{color:var(--gris);font-size:clamp(15px,2vw,18px);max-width:640px;margin:0 auto 40px;line-height:1.75;}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-p{background:linear-gradient(135deg,var(--electric),var(--violet));color:#fff;border:none;border-radius:100px;padding:15px 36px;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 28px rgba(118,84,253,.35);}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(118,84,253,.5);}
+.btn-s{background:transparent;color:var(--ice);border:1px solid rgba(180,183,217,.3);border-radius:100px;padding:15px 36px;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;transition:border-color .2s;}
+.btn-s:hover{border-color:var(--electric);}
+
+/* REACH STATS */
+.reach{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:80px;}
+.reach-stat{background:rgba(255,255,255,.03);border:1px solid rgba(180,183,217,.1);border-radius:16px;padding:28px 20px;text-align:center;}
+.reach-num{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;background:linear-gradient(135deg,var(--electric),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block;}
+.reach-label{font-size:12px;color:var(--gris);margin-top:6px;line-height:1.4;}
+
+/* SECTION HEADING */
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--electric);margin-bottom:14px;}
+.sec-h2{font-family:'Syne',sans-serif;font-size:clamp(26px,3.5vw,44px);font-weight:700;margin-bottom:16px;}
+.sec-p{color:var(--gris);font-size:15px;line-height:1.7;max-width:600px;}
+
+/* PACKAGES */
+#packages{background:rgba(20,24,41,.6);padding:80px 0;}
+.pkg-header{text-align:center;margin-bottom:56px;}
+.pkg-header .sec-p{margin:0 auto;}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.tier{border-radius:20px;padding:32px 24px;border:1px solid rgba(180,183,217,.12);background:rgba(255,255,255,.025);position:relative;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;}
+.tier::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.tier.a321::before{background:var(--gris);}
+.tier.a330::before{background:var(--electric);}
+.tier.a350::before{background:var(--violet);}
+.tier.a380::before{background:linear-gradient(90deg,var(--electric),var(--violet),var(--dawn));}
+.tier.a380{border-color:rgba(118,84,253,.3);background:rgba(118,84,253,.05);}
+.tier:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.25);}
+.tier-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--gris);margin-bottom:8px;}
+.tier-name{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;margin-bottom:4px;}
+.tier.a321 .tier-name{color:var(--gris);}
+.tier.a330 .tier-name{color:var(--electric);}
+.tier.a350 .tier-name{color:var(--violet);}
+.tier.a380 .tier-name{background:linear-gradient(135deg,var(--electric),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.tier-subtitle{font-size:11px;color:var(--gris);letter-spacing:.1em;text-transform:uppercase;margin-bottom:24px;font-family:'JetBrains Mono',monospace;}
+.tier-features{list-style:none;display:flex;flex-direction:column;gap:9px;flex:1;margin-bottom:24px;}
+.tier-features li{font-size:13px;color:var(--gris);padding-left:18px;position:relative;line-height:1.5;}
+.tier-features li::before{content:'✓';position:absolute;left:0;color:var(--electric);font-weight:700;font-size:12px;}
+.tier.a380 .tier-features li::before{color:var(--violet);}
+.tier-features li.highlight{color:var(--ice);font-weight:500;}
+.tier-features li.highlight::before{color:var(--sun);}
+.tier-cta{display:block;text-align:center;padding:12px;border-radius:12px;font-size:13px;font-weight:600;font-family:'Space Grotesk',sans-serif;cursor:pointer;border:none;text-decoration:none;transition:opacity .2s;}
+.tier.a321 .tier-cta{background:rgba(180,183,217,.12);color:var(--gris);}
+.tier.a330 .tier-cta{background:rgba(42,110,245,.13);color:var(--electric);}
+.tier.a350 .tier-cta{background:rgba(118,84,253,.13);color:var(--violet);}
+.tier.a380 .tier-cta{background:linear-gradient(135deg,var(--electric),var(--violet));color:#fff;}
+.tier-cta:hover{opacity:.8;}
+
+/* BENEFITS GRID */
+.benefits-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.bcard{background:rgba(255,255,255,.025);border:1px solid rgba(180,183,217,.1);border-radius:16px;padding:28px;}
+.bcard-icon{font-size:28px;margin-bottom:14px;display:block;}
+.bcard h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:8px;}
+.bcard p{color:var(--gris);font-size:14px;line-height:1.65;}
+
+/* COMPARISON TABLE */
+#comparison{background:rgba(20,24,41,.5);}
+.table-wrap{overflow-x:auto;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+thead tr{border-bottom:1px solid rgba(180,183,217,.12);}
+th{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;padding:14px 16px;text-align:center;color:var(--gris);}
+th:first-child{text-align:left;color:var(--ice);}
+th.col-a380{color:var(--violet);}
+th.col-a350{color:var(--violet);opacity:.75;}
+th.col-a330{color:var(--electric);}
+th.col-a321{color:var(--gris);}
+tbody tr{border-bottom:1px solid rgba(180,183,217,.06);}
+tbody tr:hover{background:rgba(255,255,255,.02);}
+td{padding:13px 16px;color:var(--gris);text-align:center;}
+td:first-child{text-align:left;color:var(--ice);font-size:13px;}
+td.yes{color:var(--electric);font-size:16px;}
+td.star{color:var(--sun);font-size:15px;}
+.row-group td{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--electric);padding:18px 16px 6px;background:rgba(42,110,245,.04);}
+
+/* CTA FORM */
+#contact{text-align:center;padding:80px 0;}
+#contact h2{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:800;margin-bottom:16px;}
+#contact .sub{color:var(--gris);font-size:16px;max-width:560px;margin:0 auto 48px;line-height:1.7;}
+.contact-form{max-width:680px;margin:0 auto;background:rgba(255,255,255,.025);border:1px solid rgba(180,183,217,.1);border-radius:20px;padding:40px;}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.fg.full{grid-template-columns:1fr;}
+.f{display:flex;flex-direction:column;gap:6px;}
+.f label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);}
+.f input,.f select,.f textarea{background:rgba(255,255,255,.04);border:1px solid rgba(180,183,217,.15);border-radius:10px;padding:11px 14px;font-family:'Space Grotesk',sans-serif;font-size:14px;color:var(--ice);outline:none;transition:border-color .2s;-webkit-appearance:none;}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--electric);background:rgba(42,110,245,.04);}
+.f select option{background:var(--mid);color:var(--ice);}
+.f textarea{resize:vertical;min-height:90px;}
+.f input::placeholder,.f textarea::placeholder{color:rgba(180,183,217,.35);}
+.tier-select{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;}
+.ts-btn{padding:10px 8px;border-radius:10px;border:1px solid rgba(180,183,217,.15);background:transparent;color:var(--gris);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;cursor:pointer;transition:all .2s;text-align:center;}
+.ts-btn:hover{border-color:var(--electric);color:var(--electric);}
+.ts-btn.selected{border-color:var(--violet);background:rgba(118,84,253,.12);color:var(--violet);}
+.ts-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gris);margin-bottom:8px;display:block;}
+.chk{display:flex;align-items:flex-start;gap:10px;cursor:pointer;margin-bottom:12px;}
+.chk input[type=checkbox]{width:15px;height:15px;accent-color:var(--electric);margin-top:3px;flex-shrink:0;}
+.chk span{font-size:13px;color:var(--gris);line-height:1.5;}
+.submit-btn{width:100%;background:linear-gradient(135deg,var(--electric),var(--violet));color:#fff;border:none;border-radius:100px;padding:16px;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s,transform .2s;margin-top:8px;letter-spacing:.04em;}
+.submit-btn:hover{opacity:.88;transform:translateY(-1px);}
+.form-success{display:none;text-align:center;padding:20px;}
+.form-success .icon{font-size:48px;display:block;margin-bottom:14px;}
+.form-success h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:10px;}
+.form-success p{color:var(--gris);font-size:14px;line-height:1.65;}
+
+/* FOOTER */
+footer{border-top:1px solid rgba(180,183,217,.08);padding:32px 24px;text-align:center;background:rgba(10,12,27,.95);}
+footer p{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gris);opacity:.4;letter-spacing:.1em;}
+
+/* RESPONSIVE */
+@media(max-width:900px){.tiers{grid-template-columns:1fr 1fr;}.reach{grid-template-columns:1fr 1fr;}.benefits-grid{grid-template-columns:1fr;}}
+@media(max-width:600px){.tiers{grid-template-columns:1fr;}.tier-select{grid-template-columns:1fr 1fr;}.fg{grid-template-columns:1fr;}.reach{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="bg-orbs"><div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div></div>
+
+<!-- NAV -->
+<nav>
+  <a href="sky-ai-summit.html" class="nav-back">← Volver al Summit</a>
+  <div class="nav-brand">SKY <span>AI</span> SUMMIT 2027</div>
+  <a href="#contact" class="nav-cta">Solicitar Kit</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="wrap">
+    <div class="eyebrow">Patrocinadores 2027</div>
+    <h1>Pon tu marca en<br><em>altitud de crucero</em></h1>
+    <p>El primer Summit de Aviación + AI de Latinoamérica reúne a los CEOs, CTOs y tomadores de decisiones de la industria aérea regional. Tu marca, frente a ellos.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-p">✈️ Solicitar Kit de Patrocinador</a>
+      <a href="#packages" class="btn-s">Ver paquetes →</a>
+    </div>
+  </div>
+</section>
+
+<!-- REACH -->
+<div class="wrap">
+  <div class="reach">
+    <div class="reach-stat"><span class="reach-num">500+</span><div class="reach-label">Asistentes presenciales esperados</div></div>
+    <div class="reach-stat"><span class="reach-num">12</span><div class="reach-label">Speakers CEO-level globales</div></div>
+    <div class="reach-stat"><span class="reach-num">3</span><div class="reach-label">Países de pauta publicitaria<br>(CA, MX, CO)</div></div>
+    <div class="reach-stat"><span class="reach-num">29h</span><div class="reach-label">Hackathon con visibilidad<br>de marca continua</div></div>
+  </div>
+</div>
+
+<!-- WHY SPONSOR -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">// Por qué patrocinar</div>
+    <h2 class="sec-h2">La audiencia que mueve la aviación en LATAM</h2>
+    <p class="sec-p" style="margin-bottom:48px">No es un congreso genérico. Es el primer espacio diseñado para que las empresas de aviación comercial conecten con el ecosistema de AI. Tus clientes ideales estarán en la sala.</p>
+    <div class="benefits-grid">
+      <div class="bcard">
+        <span class="bcard-icon">📡</span>
+        <h3>Alcance regional pre y post evento</h3>
+        <p>Tu logo en toda la pauta publicitaria digital que corre en Centroamérica, México y Colombia antes del evento. Presencia que va más allá del día del summit.</p>
+      </div>
+      <div class="bcard">
+        <span class="bcard-icon">🤝</span>
+        <h3>Networking de primer nivel</h3>
+        <p>Acceso a cenas VIP, lounges exclusivos y sesiones de networking con los CEOs, CIOs y fundadores que están transformando la aviación con IA.</p>
+      </div>
+      <div class="bcard">
+        <span class="bcard-icon">💡</span>
+        <h3>Co-crea el futuro de la industria</h3>
+        <p>Los patrocinadores A350 y A380 pueden co-diseñar los retos del hackathon y participar como jurado. Tu empresa ayuda a definir los próximos casos de uso de AI en aviación.</p>
+      </div>
+      <div class="bcard">
+        <span class="bcard-icon">🎯</span>
+        <h3>Acceso a talento del hackathon</h3>
+        <p>Flight Data Recorder: base de datos de todos los participantes del hackathon (con consentimiento). Contacto directo con los mejores desarrolladores de AI de la región.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="wrap">
+    <div class="pkg-header">
+      <div class="sec-label">// Paquetes de patrocinio</div>
+      <h2 class="sec-h2">Cuatro clases de vuelo</h2>
+      <p class="sec-p">Cada paquete está nombrado por una aeronave icónica. Cuanto mayor el avión, mayor la presencia de tu marca y los beneficios exclusivos.</p>
+    </div>
+    <div class="tiers">
+
+      <!-- A321 -->
+      <div class="tier a321">
+        <div class="tier-tag">Nivel 1</div>
+        <div class="tier-name">A321</div>
+        <div class="tier-subtitle">Economy Plus</div>
+        <ul class="tier-features">
+          <li>Logo en redes sociales, landing page y publicidad digital (CA, MX, CO)</li>
+          <li>2 Entradas VIP con acceso a Cena VIP</li>
+          <li>Agradecimiento verbal en evento + logo en pantalla principal</li>
+          <li>Logo en tótems de bienvenida</li>
+          <li>Logo en pantallas digitales del evento</li>
+          <li>Merch propia en kits de bienvenida de asistentes</li>
+        </ul>
+        <a href="#contact" class="tier-cta" onclick="selectTier('A321')">Solicitar información</a>
+      </div>
+
+      <!-- A330 -->
+      <div class="tier a330">
+        <div class="tier-tag">Nivel 2</div>
+        <div class="tier-name">A330</div>
+        <div class="tier-subtitle">Business</div>
+        <ul class="tier-features">
+          <li>Todo lo del A321</li>
+          <li class="highlight">4 Entradas VIP con Cena VIP</li>
+          <li>Presencia física de marca en el evento</li>
+          <li>Logo en camisas del Staff y promocionales (Tote Bag, Camisa, Libreta)</li>
+          <li>Proyección de material de marca en pantallas del evento</li>
+        </ul>
+        <a href="#contact" class="tier-cta" onclick="selectTier('A330')">Solicitar información</a>
+      </div>
+
+      <!-- A350 -->
+      <div class="tier a350">
+        <div class="tier-tag">Nivel 3</div>
+        <div class="tier-name">A350</div>
+        <div class="tier-subtitle">First Class</div>
+        <ul class="tier-features">
+          <li>Todo lo del A330</li>
+          <li class="highlight">6 Entradas VIP con Cena VIP</li>
+          <li class="highlight">Flight Data Recorder: base de datos de participantes del Hackathon</li>
+          <li class="highlight">Co-diseñar y lanzar un reto en el Hackathon + espacio como jurado</li>
+          <li>Marca en primer plano en todos los promocionales</li>
+          <li>Early reveal de campaña publicitaria</li>
+        </ul>
+        <a href="#contact" class="tier-cta" onclick="selectTier('A350')">Solicitar información</a>
+      </div>
+
+      <!-- A380 -->
+      <div class="tier a380">
+        <div class="tier-tag">Nivel 4 — Premium</div>
+        <div class="tier-name">A380</div>
+        <div class="tier-subtitle">Suite Privada</div>
+        <ul class="tier-features">
+          <li>Todo lo del A350</li>
+          <li class="highlight">10 Entradas VIP con Cena VIP</li>
+          <li class="highlight">FIRST CLASS ZONE: el Lounge VIP llevará el logo de tu marca</li>
+          <li class="highlight">Main Stage Branding: mención especial al inicio de una Keynote con video de marca</li>
+          <li class="highlight">Naming rights sobre el espacio VIP del evento</li>
+        </ul>
+        <a href="#contact" class="tier-cta" onclick="selectTier('A380')">Convertirme en A380</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section id="comparison">
+  <div class="wrap">
+    <div class="sec-label">// Comparativa detallada</div>
+    <h2 class="sec-h2" style="margin-bottom:36px">Beneficios por paquete</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Beneficio</th>
+            <th class="col-a321">A321</th>
+            <th class="col-a330">A330</th>
+            <th class="col-a350">A350</th>
+            <th class="col-a380">A380</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-group"><td colspan="5">Visibilidad digital</td></tr>
+          <tr><td>Logo en redes sociales y pauta (CA, MX, CO)</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="star">★</td></tr>
+          <tr><td>Logo en landing page skyaisummit.com</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="star">★</td></tr>
+          <tr><td>Early reveal en campaña publicitaria</td><td></td><td></td><td class="yes">✓</td><td class="star">★</td></tr>
+
+          <tr class="row-group"><td colspan="5">Presencia en evento</td></tr>
+          <tr><td>Agradecimiento verbal + logo en pantalla principal</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Logo en tótems de bienvenida</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Logo en pantallas digitales del evento</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Presencia física de marca en el evento</td><td></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Proyección de material de marca en pantallas</td><td></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>FIRST CLASS ZONE — Lounge VIP con logo</td><td></td><td></td><td></td><td class="star">★</td></tr>
+          <tr><td>Main Stage Branding — video en Keynote</td><td></td><td></td><td></td><td class="star">★</td></tr>
+
+          <tr class="row-group"><td colspan="5">Kits y merch</td></tr>
+          <tr><td>Merch propia en kits de bienvenida</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Logo en camisas del Staff y Tote Bag</td><td></td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+          <tr class="row-group"><td colspan="5">Entradas VIP + Networking</td></tr>
+          <tr><td>Entradas VIP con acceso a Cena VIP</td><td>2</td><td>4</td><td>6</td><td>10</td></tr>
+          <tr><td>Cena VIP en Centro Histórico con Speakers</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+
+          <tr class="row-group"><td colspan="5">Hackathon</td></tr>
+          <tr><td>Flight Data Recorder (base de datos participantes)</td><td></td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          <tr><td>Co-diseñar reto y ser jurado del Hackathon</td><td></td><td></td><td class="yes">✓</td><td class="yes">✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-label" style="text-align:center">// Solicitar información</div>
+    <h2>Hablemos de<br><em style="background:linear-gradient(135deg,var(--electric),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-style:normal">tu patrocinio</em></h2>
+    <p class="sub">Completa el formulario y te enviaremos el Kit completo de patrocinadores con propuesta personalizada en menos de 48 horas.</p>
+
+    <div class="contact-form">
+      <div id="sponsor-form">
+        <span class="ts-label">Paquete de interés (puedes cambiarlo después)</span>
+        <div class="tier-select">
+          <div class="ts-btn" id="ts-a321" onclick="selectTier('A321')">A321<br><span style="font-size:9px;opacity:.7">Economy+</span></div>
+          <div class="ts-btn" id="ts-a330" onclick="selectTier('A330')">A330<br><span style="font-size:9px;opacity:.7">Business</span></div>
+          <div class="ts-btn" id="ts-a350" onclick="selectTier('A350')">A350<br><span style="font-size:9px;opacity:.7">First Class</span></div>
+          <div class="ts-btn selected" id="ts-a380" onclick="selectTier('A380')">A380<br><span style="font-size:9px;opacity:.7">Suite VIP</span></div>
+        </div>
+        <input type="hidden" id="selected-tier" value="A380">
+
+        <div class="fg">
+          <div class="f"><label>Nombre *</label><input type="text" id="sf-fn" placeholder="Tu nombre"></div>
+          <div class="f"><label>Apellido *</label><input type="text" id="sf-ln" placeholder="Tu apellido"></div>
+        </div>
+        <div class="fg full">
+          <div class="f"><label>Email corporativo *</label><input type="email" id="sf-em" placeholder="tuemail@empresa.com"></div>
+        </div>
+        <div class="fg">
+          <div class="f"><label>Empresa / Marca *</label><input type="text" id="sf-org" placeholder="Nombre de la empresa"></div>
+          <div class="f"><label>Teléfono / WhatsApp</label><input type="tel" id="sf-ph" placeholder="+503 7000 0000"></div>
+        </div>
+        <div class="fg">
+          <div class="f"><label>Cargo *</label><input type="text" id="sf-role" placeholder="CEO, CMO, Director…"></div>
+          <div class="f"><label>País</label>
+            <select id="sf-country">
+              <option value="">Seleccionar…</option>
+              <option>El Salvador</option><option>Guatemala</option><option>Honduras</option>
+              <option>México</option><option>Colombia</option><option>Estados Unidos</option><option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg full">
+          <div class="f"><label>¿Qué busca lograr con este patrocinio?</label>
+            <textarea id="sf-goal" placeholder="Visibilidad de marca, acceso a talento, networking específico, co-creación de retos…"></textarea>
+          </div>
+        </div>
+        <label class="chk"><input type="checkbox" id="sf-kit"><span>Deseo recibir el <strong>Kit de Patrocinadores</strong> completo por email (propuesta + materiales de marca)</span></label>
+        <label class="chk"><input type="checkbox" id="sf-call"><span>Me interesa agendar una <strong>llamada con el equipo</strong> para explorar opciones personalizadas</span></label>
+        <label class="chk"><input type="checkbox" id="sf-terms"><span>Acepto la <a href="#">Política de Privacidad</a> y que el equipo del SKY AI Summit me contacte</span></label>
+        <button class="submit-btn" onclick="submitSponsor()">✈️ Solicitar Kit de Patrocinador</button>
+      </div>
+
+      <div class="form-success" id="sponsor-success">
+        <span class="icon">🤝</span>
+        <h3>¡Solicitud recibida!</h3>
+        <p>Gracias por tu interés en patrocinar el SKY AI Summit 2027. Nuestro equipo te contactará en las próximas 24–48 horas con la propuesta personalizada y el Kit completo de patrocinadores.<br><br>Si necesitas atención inmediata: <a href="mailto:sponsors@skyaisummit.com">sponsors@skyaisummit.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>SKY AI SUMMIT 2027 · KEY Institute + Aerojet · El Salvador · Todos los derechos reservados · <a href="sky-ai-summit.html" style="color:var(--electric)">Volver al Summit</a></p>
+</footer>
+
+<script>
+function selectTier(name){
+  document.querySelectorAll('.ts-btn').forEach(b=>b.classList.remove('selected'));
+  const btn=document.getElementById('ts-'+name.toLowerCase());
+  if(btn) btn.classList.add('selected');
+  document.getElementById('selected-tier').value=name;
+  // Scroll to form
+  const f=document.getElementById('contact');
+  if(f) f.scrollIntoView({behavior:'smooth'});
+}
+
+function submitSponsor(){
+  const fn=document.getElementById('sf-fn').value.trim();
+  const ln=document.getElementById('sf-ln').value.trim();
+  const em=document.getElementById('sf-em').value.trim();
+  const org=document.getElementById('sf-org').value.trim();
+  const role=document.getElementById('sf-role').value.trim();
+  const terms=document.getElementById('sf-terms').checked;
+  if(!fn||!ln||!em||!org||!role){alert('Por favor completa todos los campos requeridos (*).');return;}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){alert('Por favor ingresa un email válido.');return;}
+  if(!terms){alert('Debes aceptar la Política de Privacidad para continuar.');return;}
+  document.getElementById('sponsor-form').style.display='none';
+  document.getElementById('sponsor-success').style.display='block';
+}
+</script>
+</body>
+</html>
