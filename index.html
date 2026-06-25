@@ -1096,7 +1096,7 @@ function updatePlane(){
 
   // Rotation: going down = -30deg (nose down), going up = +30deg (nose up), level = 0
   // The ✈️ emoji by default points right. We want: going down → tilt nose down (rotate positive), going up → tilt nose up (rotate negative)
-  const targetRot=planeDir===1?25:-25;
+const targetRot=planeDir===1?90:-90;
   planeInner.style.transform=`rotate(${targetRot}deg)`;
 
   // Reveals
